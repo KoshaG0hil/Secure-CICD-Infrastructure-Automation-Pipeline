@@ -8,7 +8,7 @@ automated rollback to the previous stable revision and generates an incident rep
 import os
 import json
 import time
-from typing import Dict, Any, Optional
+from typing import Dict, Any
 from datetime import datetime, timezone
 
 

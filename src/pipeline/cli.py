@@ -5,7 +5,6 @@ container image scanning, approval gates, deployments, and automated rollback co
 """
 
 import os
-import sys
 import time
 import json
 import argparse
@@ -16,7 +15,6 @@ try:
     from rich.console import Console
     from rich.table import Table
     from rich.panel import Panel
-    from rich.text import Text
     from rich import box
     RICH_AVAILABLE = True
 except ImportError:
@@ -27,7 +25,6 @@ from src.security.sast_analyzer import SASTAnalyzer
 from src.security.dependency_scanner import DependencyScanner
 from src.security.iac_validator import IaCPolicyValidator
 from src.deployment.deployer import DeploymentCoordinator
-from src.deployment.rollback_controller import RollbackController
 
 
 class PipelineOrchestrator:
@@ -231,7 +228,6 @@ class PipelineOrchestrator:
         self._render_stage(s5)
 
         total_duration = round(time.time() - pipeline_start, 2)
-        overall_passed = all(s["passed"] for s in stages_output if s["stage_id"] != "STAGE-5-DEPLOYMENT")
         if simulate_rollback:
             overall_status = "ROLLED_BACK_SAFELY"
         else:

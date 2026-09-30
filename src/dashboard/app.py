@@ -8,7 +8,6 @@ import os
 import json
 import time
 import streamlit as st
-import pandas as pd
 
 from src.security.secret_scanner import SecretScanner
 from src.security.sast_analyzer import SASTAnalyzer
@@ -237,7 +236,7 @@ elif menu == "Interactive Rollback Simulator":
             coordinator = DeploymentCoordinator("secure-cloud-service", "v1.1.9")
             res = coordinator.deploy("v1.2.0-unstable", simulate_failure=True)
 
-            st.write(f"🛑 In-flight deployment halted.")
+            st.write("🛑 In-flight deployment halted.")
             st.write(f"🔙 Service traffic reverted to stable revision: `{res['active_version']}`.")
             st.write(f"📄 Incident post-mortem generated: `{res['rollback_details']['incident_id']}`")
             status.update(label="🛡️ Automated Rollback Completed! Service restored with 0 downtime.", state="complete", expanded=True)

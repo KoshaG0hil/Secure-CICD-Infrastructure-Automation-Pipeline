@@ -6,7 +6,7 @@ and triggers automatic rollback if health validation fails.
 
 import time
 import logging
-from typing import Dict, Any, Optional
+from typing import Dict, Any
 from src.deployment.health_probe import DeploymentHealthProbe
 from src.deployment.rollback_controller import RollbackController
 

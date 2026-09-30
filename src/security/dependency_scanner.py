@@ -6,7 +6,7 @@ checks for unpinned versions, and validates Software Bill of Materials (SBOM) in
 
 import os
 import re
-from typing import List, Dict, Any
+from typing import Dict, Any
 
 
 KNOWN_VULNERABILITIES = [
