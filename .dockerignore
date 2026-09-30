@@ -1,0 +1,40 @@
+# Git
+.git
+.gitignore
+.github
+
+# Python caches and virtual environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+tests/
+
+# Terraform
+terraform/
+.terraform/
+*.tfstate*
+*.tfvars
+
+# Documentation and assets
+docs/
+assets/
+reports/
+*.md
+
+# Local runtime & IDE files
+.vscode/
+.idea/
+.DS_Store
+*.log

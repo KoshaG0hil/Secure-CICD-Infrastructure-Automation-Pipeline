@@ -1,0 +1,7 @@
+aws_region      = "us-east-1"
+environment     = "production"
+project_name    = "secure-pipeline-app"
+vpc_cidr        = "10.0.0.0/16"
+app_port        = 8080
+app_count       = 2
+container_image = "123456789012.dkr.ecr.us-east-1.amazonaws.com/secure-pipeline-app:v1.2.0"
